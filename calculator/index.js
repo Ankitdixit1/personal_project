@@ -1,16 +1,19 @@
-// function get(){
-//     document.querySelectorAll(".button")
-// }
-// get.array.forEach(Element => {
-//     Element.add
-// });
-const element = document.querySelectorAll("button");
-element.forEach((sold)=>{
+// let buttonList = document.querySelectorAll(".button");
+// Array.from(buttonList).forEach(function(i){
+//   i.addEventListener("click", function(e){
+//     document.getElementById("demo").innerHTML = e.target.innerHTML;
+//   })
+// })
+let collect = "";
+let buttonList = document.querySelectorAll(".button");
+Array.from(buttonList).forEach((sold)=>{
     sold.addEventListener("click", (e)=>{
-        let select = document.getElementsByTagName("h1");
-        select = select + e.target.innerHTML;
         if(e.target.innerHTML == "="){
-            eval(select);
+            collect = eval(collect);
+            document.querySelector("demo").value = collect;
+        }else{
+            collect = collect + e.target.innerHTML;
+            document.querySelector("demo").value = collect;
         }
     })
 })
