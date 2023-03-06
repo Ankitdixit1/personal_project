@@ -1,9 +1,4 @@
-// let buttonList = document.querySelectorAll(".button");
-// Array.from(buttonList).forEach(function(i){
-//   i.addEventListener("click", function(e){
-//     document.getElementById("demo").innerHTML = e.target.innerHTML;
-//   })
-// })
+
 let collect = "";
 let buttonList = document.querySelectorAll(".button");
 buttonList.forEach((sold)=>{
